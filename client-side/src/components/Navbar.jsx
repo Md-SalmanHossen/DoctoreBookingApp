@@ -1,11 +1,17 @@
 
 import { assets } from "../assets/assets_frontend/assets";
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+
+  const navigate=useNavigate();
+
+  const [showMenu,setShowMenu]=useState(false);
+  const [token,setToken]=useState(true);
+
   return (
-    <div className="flex items-center justify-between text-sm mb-5 py-4 border-b  border-b-gray-400 ">
+    <div className="flex items-center justify-between text-sm mb-5 py-3 border-b  border-b-gray-400 ">
       
       <img 
         className="w-[124px] cursor-pointer" 
@@ -37,7 +43,26 @@ const Navbar = () => {
 
       </ul>
 
-      <button>Create Account</button>
+      <div className="flex items-center gap-4">
+        {
+          token 
+          ? <div className="flex items-center gap-2 cursor-pointer group relative">
+              <img className="w-8 rounded-full" src={assets.profile_pic} alt="" />
+              <img className="w-2.5" src={assets.dropdown_icon} alt="" />
+              <div>
+                <p>My Profile</p>
+                <p>My Appointment</p>
+                <p>Logout</p>
+              </div>
+          </div>
+          :<button 
+            className="bg-primary text-white px-8 py-3 rounded-full font-light md:block"
+            onClick={()=>navigate('/login')}
+          >Create Account</button>
+        }
+
+      </div>
+
     </div>
   );
 };
