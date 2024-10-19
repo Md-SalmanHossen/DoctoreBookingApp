@@ -22,7 +22,11 @@ const Header = () => {
           href="#specialty"
         >
           Book appointment 
-          <img className='w-3' src={assets.arrow_icon} alt="Arrow icon" />
+          <img 
+            className='w-3' 
+            src={assets.arrow_icon} 
+            alt="Arrow icon" 
+          />
         </a>
       </div>
 
