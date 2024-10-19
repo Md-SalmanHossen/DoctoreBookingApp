@@ -14,6 +14,7 @@ import Navbar from './components/Navbar';
 //package import
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
         <Route path="/my-appointment" element={<MyAppointment/>}/>
         <Route path="/appointment/:docId" element={<Appointment/>}/>
       </Routes>
+      <Footer/>
     </div>
   )
 }
