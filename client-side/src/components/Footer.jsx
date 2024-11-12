@@ -4,6 +4,7 @@ import { assets } from '../assets/assets_frontend/assets'
 const Footer = () => {
   return (
     <div className='md:mx-10 px-4 py-8 bg-gray-100 text-gray-800'>
+      
       <div className='flex flex-col sm:flex-row sm:justify-between gap-10'>
         {/* Left side */}
         <div className='flex flex-col space-y-5 sm:w-1/3'>

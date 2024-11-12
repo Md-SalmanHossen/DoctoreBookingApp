@@ -22,7 +22,7 @@ const TopDoctors = () => {
                      key={index}
                   >
                      <img
-                        className='bg-blue-50 h-48 w-full object-cover' // Maintain size and aspect ratio
+                        className='bg-blue-50 h-48 w-full object-cover hover:bg-primary ' // Maintain size and aspect ratio
                         src={item.image}
                         alt={`Dr. ${item.name}`} // More descriptive alt text
                      />
